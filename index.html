@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking System Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script type='module' src="js/script.js" defer></script>
+</head>
+<body>
+ 
+   
+    
+    <nav class="navbar">
+        <div class="container">
+            <img src="images/1.png" alt="">
+            <div class="links" id="navbarNav">
+                <a class="nav-link" href="#booking-sec">Book Now</a>
+                <a class="nav-link" href="#menu-section">Menu</a> 
+                <a class="nav-link" href="#faq-section">FAQ</a>  
+            </div>
+        </div>
+    </nav>
+    
+    <div class="cta-container">
+    <!-- Call to Action Section -->
+    <div id="cta-section" class="cta-section animate delay-1">
+        <h2 class="cta-title">Ready to Book Your Event?</h2>
+        <p class="cta-text">Let us bring a special experience to your event!</p>
+        <div class="cta-buttons">
+            <a href="#booking-sec" class="btn btn-cta btn-lg">Book Now!</a>
+            <a href="#menu-section" class="btn btn-cta btn-lg">See our menu!</a> 
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/pexels-fidel-2814828.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-fu-zhichao-176355-587741.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-goumbik-306046.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-goumbik-306070.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-mat-brown-150387-1395966.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-panditwiguna-2788488.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-pietrozj-671956.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/pexels-thatguycraig000-2306282.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+    <!-- Booking Section -->
+    <div id="booking-form" class="container booking-section animate delay-2">
+        
+
+        <div class="booking-wrapper" id="booking-sec">
+            <div class="card">
+                <h2 class="text-center">Book Your Event!</h2>
+                <form id="booking-form">
+                    <div class="mb-3"><label for="name" class="form-label">Your Name</label><input type="text" class="form-control" id="name" required></div>
+                    <div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email"></div>
+                    <div class="mb-3"><label for="phone" class="form-label">Phone number</label><input type="tel" pattern="[0-9]{10}" class="form-control" id="phone"></div>
+                    <div class="mb-3"><label for="date" class="form-label">Event Date</label><input type="date" class="form-control" id="date"></div>
+                    <div class="mb-3"><label for="time" class="form-label">Event Time</label><input type="time" class="form-control" id="time"></div>
+                    <div class="mb-3"><label for="loc" class="form-label">Event Address/Location</label><input type="text" class="form-control" id="loc"></div>
+            
+                    <div class="mb-3"><label for="package" class="form-label">Select Package</label>
+                        <select class="form-select" id="package">
+                            <option value="basic">Basic Package $300</option>
+                            <option value="standard">Standard Package $450</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100"><i class="bi bi-cart"></i> Submit Booking</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-section" class="container text-center my-5">
+        <h2 class="mb-4">Our Menu</h2>
+        <div class="menu-wrapper">
+            <img src="images/White Photocentric Food Lunch Menu.png" alt="" class="img-fluid rounded shadow-lg">
+        </div>
+    </div>
+
+    <div id="faq-section" class="container faq-section animate delay-3">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How does the service work?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We bring everything needed to your event, including our setup, equipment, and staff. From setup to teardown, our team handles it all, so you can relax and enjoy the experience.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I make a booking?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Booking is simple—just fill out our online form with your event details like date, location, and number of guests. Once submitted, we’ll get in touch to confirm availability and go over the details.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I customize the menu or services?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely! We offer customizable options to better fit your event. Whether it’s the menu, decor, or special requests, we’ll work with you to personalize the experience.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How far in advance should I book?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We recommend booking at least 2–4 weeks in advance to secure your date, especially during busy seasons. That said, feel free to reach out for last-minute availability—we'll do our best to accommodate you!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: { delay: 2000, disableOnInteraction: false },
+            speed: 800,
+            effect: 'slide',
+            fadeEffect: { crossFade: true },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

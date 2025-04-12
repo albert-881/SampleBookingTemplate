@@ -1,0 +1,443 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdf6;
+    color: #f2c688;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Set logo size */
+.navbar img {
+    width: 230px;  /* Set a fixed width */
+    height: 150px;  /* Maintain aspect ratio */
+    
+    
+}
+
+.cta-container {
+    display: flex;
+    padding-top: 50px;
+    padding-right: 30px;
+    justify-content: center;
+    
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fffdf6;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navbar Links Animation */
+.nav-link {
+    position: relative;
+    color: #2c2c2c;
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    opacity: 0; /* Initially hide the links */
+    animation: fadeIn 1s forwards; /* Apply the fadeIn animation */
+}
+
+/* Apply staggered delay for each link */
+.nav-link:nth-child(1) {
+    animation-delay: 0.5s; /* Delay for the first link */
+}
+.nav-link:nth-child(2) {
+    animation-delay: 1s; /* Delay for the second link */
+}
+.nav-link:nth-child(3) {
+    animation-delay: 1.5s; /* Delay for the third link */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f2c688;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #f2c688;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+}
+
+/* Booking Section Layout */
+.booking-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px; /* Increased the max width to make the sections larger */
+    margin: 50px auto;
+    padding: 40px; /* Increased padding for larger sections */
+}
+
+/* Keyframes for fadeIn effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start from above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Keyframe for smooth fade and up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Booking Form (Left Side) */
+.booking-wrapper {
+    flex: 1;
+    max-width: 600px; /* Increased max-width to make the booking form wider */
+}
+
+.card {
+    background-color: #f2c688;
+    color: #fffdf6;
+    padding: 40px; /* Increased padding for a larger card */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+.btn-custom {
+    background-color: #f2c688;
+    color: #fffdf6;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    background-color: #f2c688;
+    transform: scale(1.05);
+}
+
+.navbar-nav {
+    display: flex;  /* Enables flexbox */
+}
+
+/* Swiper Slideshow */
+.swiper-container {
+    width: 50%;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make slides take full height */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Make images fully cover the slide */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+/* Swiper Pagination & Navigation */
+.swiper-pagination-bullet {
+    background: #2ca89c !important;
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: #22356f !important;
+    opacity: 1;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #2ca89c !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin-top: 50px;
+    background-color: #f2c688;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #fffdf6;
+}
+
+.accordion-button {
+    background-color: #f5b760;
+    color: #fffdf6;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    background-color: #fffdf6;
+    color: #2c2c2c;
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fffdf6;
+    color: #2c2c2c;
+    padding: 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-text {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #2c2c2c;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide elements */
+.cta-title, .cta-text, .cta-buttons {
+    opacity: 0;
+}
+
+/* Animate elements with delay */
+.cta-title {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.cta-text {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.cta-buttons {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+.btn-cta {
+    background-color: #f2c688;
+    color: #fffdf6;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-size: 1.3rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cta:hover {
+    background-color: #fffdf6;
+    color: #eeb977;
+    border: 1px solid #f2c688;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay for different sections */
+.cta-section, .booking-section, .faq-section {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.cta-section { animation-delay: 0.2s; }
+.booking-section { animation-delay: 0.4s; }
+.faq-section { animation-delay: 0.6s; }
+
+/* Center the navbar title and space links */
+.navbar .container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+#menu-section img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .booking-section {
+        flex-direction: column;
+    }
+    /* Ensure the CTA and Swiper are stacked properly */
+    .cta-container {
+        display: flex;
+        flex-direction: column-reverse; /* Moves the slider below the CTA */
+        align-items: center;
+        
+    }
+
+    /* Set logo size */
+.navbar img {
+    width: 200px;  /* Set a fixed width */
+    height: 150px;  /* Maintain aspect ratio */
+    
+    
+}
+.navbar {
+    padding: 0;
+}
+
+    .swiper-container {
+        width: 80%;
+        height: auto;
+        max-height: 350px;
+        margin-bottom: 10px;
+    }
+
+
+    .swiper-slide img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        
+    }
+   
+    .navbar .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    #menu-section img {
+        width: 100%; /* Default size on larger screens */
+        max-width: 800px; 
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .cta-buttons {
+        display: flex; /* Enables flexbox */
+        align-items: center; /* Centers buttons horizontally */
+        justify-content: center; /* Centers buttons vertically */
+        width: 40%; /* Keeps the original width */
+        margin: auto; /* Centers the container horizontally */
+        gap: 10px; /* Space between buttons */
+    }    
+    .cta-buttons a{
+        width: 40vw;
+        font-size: 15px;
+    }
+
+    .cta-section{
+        text-align: center;
+        margin-top: 0px;
+    }
+    .cta-container{
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

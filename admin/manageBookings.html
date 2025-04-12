@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Bookings</title>
+  <script src="js/manageBookings.js" type="module" defer></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #4a90e2;
+      color: white;
+      font-size: 1rem;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button {
+      padding: 8px 15px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #357abd;
+    }
+
+    .delete-button {
+      background-color: #ff4747;
+    }
+
+    .delete-button:hover {
+      background-color: #ff3333;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      display: block;
+      width: 200px;
+      background-color: #999;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #777;
+    }
+
+    .status-select {
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      width: 120px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .status-select option {
+      padding: 8px;
+    }
+
+    .pending {
+      color: blue;
+    }
+
+    .confirmed {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .completed {
+      background-color: #2196f3;
+      color: white;
+    }
+
+    .canceled {
+      background-color: #ff4747;
+      color: white;
+    }
+
+    /* Styling for filter and sort dropdowns */
+    .filter-sort-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    select:hover {
+      background-color: #f0f0f0;
+    }
+
+    .filter-sort-container select {
+      width: 48%;
+    }
+
+    /* Responsive Design for Smaller Screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+      }
+
+      .action-buttons {
+        flex-direction: column;
+      }
+
+      .back-button {
+        width: 100%;
+      }
+
+      .filter-sort-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .filter-sort-container select {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Manage Bookings</h1>
+
+    <div class="filter-sort-container">
+      <select id="statusFilter">
+        <option value="all">All Statuses</option>
+        <option value="pending">Pending</option>
+        <option value="confirmed">Confirmed</option>
+        <option value="completed">Completed</option>
+        <option value="canceled">Canceled</option>
+      </select>
+      
+      <select id="sortBookings">
+        <option value="asc">Sort by Date (Ascending)</option>
+        <option value="desc">Sort by Date (Descending)</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Event Date</th>
+          <th>Event Location</th>
+          <th>Event Time</th>
+          <th>Package</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookingTable">
+        <!-- Booking rows will be populated here via JS -->
+      </tbody>
+    </table>
+
+    <button class="button back-button" onclick="window.location.href='adminDashboard.html'">Back to Dashboard</button>
+  </div>
+</body>
+</html>
