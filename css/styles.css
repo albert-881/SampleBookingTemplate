@@ -422,7 +422,7 @@ html, body {
         display: flex; /* Enables flexbox */
         align-items: center; /* Centers buttons horizontally */
         justify-content: center; /* Centers buttons vertically */
-        width: 40%; /* Keeps the original width */
+        width: 80%; /* Keeps the original width */
         margin: auto; /* Centers the container horizontally */
         gap: 10px; /* Space between buttons */
     }    
