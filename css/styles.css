@@ -369,6 +369,10 @@ html, body {
     .booking-section {
         flex-direction: column;
     }
+
+    #booking-form {
+        width:70vw;
+    }
     /* Ensure the CTA and Swiper are stacked properly */
     .cta-container {
         display: flex;
@@ -427,10 +431,18 @@ html, body {
         gap: 10px; /* Space between buttons */
         
     }    
-    .cta-buttons a{
+    .cta-buttons a {
         width: 45vw;
         font-size: 15px;
-        text-wrap: nowrap;
+        text-wrap: nowrap; /* Or consider removing this if it cuts off text */
+        padding: 12px 20px; /* Add padding for consistent height */
+        text-align: center; /* Center text */
+        display: flex; /* Use flex to center content */
+        justify-content: center;
+        align-items: center;
+        height: 50px; /* Set a fixed height */
+        box-sizing: border-box; /* Prevent padding from adding to height */
+        white-space: nowrap; /* Ensures text stays in one line */
     }
 
     .cta-section{
