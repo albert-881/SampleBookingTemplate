@@ -425,11 +425,12 @@ html, body {
         width: 100%; /* Keeps the original width */
         margin: auto; /* Centers the container horizontally */
         gap: 10px; /* Space between buttons */
+        
     }    
     .cta-buttons a{
         width: 45vw;
         font-size: 15px;
-        
+        height: 55px;
     }
 
     .cta-section{
