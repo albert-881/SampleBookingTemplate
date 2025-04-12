@@ -4,7 +4,7 @@ html, body {
     padding: 0;
     background-color: #fffdf6;
     color: #f2c688;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Bitter';
 }
 
 /* Set logo size */
@@ -422,13 +422,14 @@ html, body {
         display: flex; /* Enables flexbox */
         align-items: center; /* Centers buttons horizontally */
         justify-content: center; /* Centers buttons vertically */
-        width: 80%; /* Keeps the original width */
+        width: 100%; /* Keeps the original width */
         margin: auto; /* Centers the container horizontally */
         gap: 10px; /* Space between buttons */
     }    
     .cta-buttons a{
-        width: 40vw;
+        width: 45vw;
         font-size: 15px;
+        
     }
 
     .cta-section{
