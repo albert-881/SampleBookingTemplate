@@ -430,7 +430,7 @@ html, body {
     .cta-buttons a{
         width: 45vw;
         font-size: 15px;
-        height: 55px;
+        text-wrap: nowrap;
     }
 
     .cta-section{
